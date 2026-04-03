@@ -1,10 +1,8 @@
-print("=== Mystery Lab Adventure ===")
-
-playing = True
-
-while playing:
+def show_intro():
+    print("=== Mystery Lab Adventure ===")
     print("You wake up in a mysterious laboratory.\n")
 
+def make_choice():
     choice = input("Do you EXPLORE the room or LEAVE? ").lower()
 
     if choice == "explore":
@@ -14,9 +12,18 @@ while playing:
     else:
         print("You hesitate and nothing happens.")
 
-    again = input("\nPlay again? (yes/no): ").lower()
+def play_game():
+    playing = True
 
-    if again != "yes":
-        playing = False
+    while playing:
+        show_intro()
+        make_choice()
+    
+        again = input("\nPlay again? (yes/no): ").lower()
+        if again != "yes":
+                playing = False
 
-print("\nThanks for playing!\n")
+    print("\nThanks for playing!\n")
+
+# Start the game
+play_game()
