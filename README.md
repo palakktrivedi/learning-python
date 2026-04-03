@@ -11,3 +11,8 @@ This is my first Python project while learning programming fundamentals.
 - learn python fundamentals
 - practice Git and GitHub workflow
 - expand into a larger game system
+
+## Features
+- interactive choices
+- game loop system
+- replay functionality
