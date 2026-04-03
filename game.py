@@ -1,14 +1,22 @@
-print("You wake up in a mysterious laboratory.")
+print("=== Mystery Lab Adventure ===")
 
-name = input("What is your name, explorer? ")
+playing = True
 
-print(f"Welcome, {name}.")
+while playing:
+    print("You wake up in a mysterious laboratory.\n")
 
-choice = input("Do you EXPLORE the room or LEAVE? ").lower()
+    choice = input("Do you EXPLORE the room or LEAVE? ").lower()
 
-if choice == "explore":
-    print("You discover a glowing device on a table.")
-elif choice == "leave":
-    print("You escape safely... for now.")
-else:
-    print("You hesitate and nothing happens.")
+    if choice == "explore":
+        print("You discover a glowing device on a table.")
+    elif choice == "leave":
+        print("You escape safely... for now.")
+    else:
+        print("You hesitate and nothing happens.")
+
+    again = input("\nPlay again? (yes/no): ").lower()
+
+    if again != "yes":
+        playing = False
+
+print("\nThanks for playing!\n")
