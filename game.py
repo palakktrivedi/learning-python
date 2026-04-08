@@ -33,6 +33,12 @@ def show_status():
 
     if rooms[current_room]["items"]:
         print(f"You see: {rooms[current_room]['items']}")
+    
+    if current_room == "hallway":
+        if rooms["hallway"]["locked"]:
+            print("There is a locked door to the east.")
+        else:
+            print("There is an open door to the east.")
 
 
 def get_command():
